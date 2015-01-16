@@ -1,0 +1,25 @@
+
+\begin{problem}
+(a)
+Give the exact formula (as a function of $n$) for the number of
+times ``bingo" is printed by Algorithm~\textsc{BingoPrint} below.
+First express it as a summation formula and justify it. Then simplify it to 
+obtain a closed-form expression. Show your derivation.
+
+\noindent
+(b)
+Give the asymptotic value of the
+number of ``bingo"s using the $\Theta$-notation. Include a brief justification. You will need a formula
+for the sum of consecutive squares that you can find on the internet.
+
+\begin{tabbing}
+aa \= aa \= aa \= aa \= aa \= aa \= \kill
+\textbf{Algorithm} \textsc{BingoPrint} $(n: \mbox{\bf integer})$ \\
+      \> \textbf{for} $i \leftarrow 1$ \textbf{to} $2n+1$
+                         \textbf{do} \\
+      \> \> \textbf{for} $j \leftarrow 1$ \textbf{to} $i^2+2i$ \textbf{do} \\
+      \> \> \> print(``bingo")
+\end{tabbing}
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
