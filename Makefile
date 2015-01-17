@@ -14,4 +14,5 @@ hw1: pdf
 	$(MAKE)
 
 clean:
+	rm ./hw1/hw1.tex
 	rm -rf ./hw1/pdf
