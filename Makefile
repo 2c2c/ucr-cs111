@@ -4,10 +4,10 @@ latexmk -pdf -jobname=pdf/$(TARGET) $(TARGET).tex;\
 cd ..
 
 
-all: pdf hw1
+all: hw1
 
 pdf: 
-	[ -e ./hw1/pdf ] || mkdir ./hw1/pdf
+	[ -e ./$(TARGET)/pdf ] || mkdir ./$(TARGET)/pdf
 
 hw1: TARGET = hw1
 hw1: pdf 
