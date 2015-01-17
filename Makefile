@@ -4,7 +4,7 @@ pdflatex ./merged.tex -output-directory=../pdf/;\
 cd ..
 
 
-all: pdf hw1
+all: hw1
 
 pdf: 
 	[ -e pdf ] || mkdir pdf
