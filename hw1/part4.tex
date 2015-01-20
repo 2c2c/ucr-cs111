@@ -7,39 +7,45 @@ Justify your answer.
 Give an informal explanation using asymptotic
 relations between the functions $n^c$, $\log n$, and $c^n$.
 
+\medskip
 (a) $9n^2 + n^3/2 + 29n + 13$
 
-\newline
+\medskip
 \textbf{Solution:} $\Theta (n^3)$
-\newline\newline
+
 $n^3$ is the highest degree of $n$ in this equation. Therefore, it is the largest degree of complexity.
 
+\medskip
 (b) $\sqrt{n}+ 7\log^5 n + 2n\log n$
 
-\newline
+\medskip
 \textbf{Solution:} $\Theta (nlogn)$
-\newline\newline
+
 $logn$ is very small compared to $n$. So $nlogn$ would be the greatest asymptotic term.
+\medskip
 
 (c) $1+ n^3\log^3n + 21 n^2\log^4n$
 
-\newline
+\medskip
 \textbf{Solution:} $\Theta (n^3log^3n)$
-\newline\newline
+
 Since $logn$ has a much smaller degree of complexity compared to $n$, any $n^k$ is generally bigger than any $klogn$
+\medskip
+
 
 (d) $\log^7n + n 2^n + 13n\log^9n$
 
-\newline
+\medskip
 \textbf{Solution:} $\Theta (n2^n)$
-\newline\newline
+
 $n$ is multiplied by both $2^n$ and $logn$. Since $2^n$ has the highest complexity, $n2^n$ is the greatest term.
+\medskip
 
 (e) {$n^53^n+4^n$}
 
-\newline
+\medskip
 \textbf{Solution:} $\Theta (4^n)$
-\newline\newline
+
 Both terms are very similar. As the elements increase, $4^n$ becomes greater than $n^5 3^n$. This can also be seen here
 \[ n^5 * 3^n  <  4^n \]
 \[ n^5 < (4/3)^n \]
