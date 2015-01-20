@@ -22,4 +22,33 @@ aa \= aa \= aa \= aa \= aa \= aa \= \kill
 \end{tabbing}
 \end{problem}
 
+\begin{solution}
+(a) Each ``print" is treated as a single output. Therefore, the equation for each print is
+
+\[ \sum\limits_{j=1}^{i^2 + 2i} 1 \]
+When applied to the outer for loop, our equation becomes
+
+\[ \sum\limits_{i=1}^{2n+1}\sum\limits_{j=1}^{i^2 + 2i} 1 \]
+
+Expanded, the sum is
+
+\[ \sum\limits_{i=1}^{2n+1} i^2 + 2i \]
+
+\[ \sum\limits_{i=1}^{2n+1} i^2 +  \sum\limits_{i=1}^{2n+1} 2i \]
+
+\[ \sum\limits_{i=1}^{2n+1} i^2 +  2\sum\limits_{i=1}^{2n+1} i\]
+
+\[ \frac{(2n+1)(2n+2)(2(2n+1))}{6} + 2\frac{(2n+1)(2n+2)}{2} \]
+
+\[ \frac{(2n+1)(2n+2)(2(2n+1))}{6} + (2n+1)(2n+2) \]
+
+\[ \frac{(2n+1)(2n+2)(4n+2)}{6} + (2n+1)(2n+2) \]
+
+(b) The right side of the equation has the highest degree of n. 
+
+\[ (2n+1)(2n+2)(4n+2) = ~(n^3) \]
+
+\[ \Theta (n^3) \]
+
+\end{solution}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
