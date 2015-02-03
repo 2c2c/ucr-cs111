@@ -18,7 +18,7 @@ hw2: pdf
 	$(MAKE)
 
 clean:
-	rm ./hw1/hw1.tex
-	rm -rf ./hw1/pdf
-	rm ./hw2/hw2.tex
-	rm -rf ./hw2/pdf
+	[ -e ./hw1/hw1.tex ] && rm ./hw1/hw1.tex
+	[ -e ./hw1/pdf ] && rm -rf ./hw1/pdf
+	[ -e ./hw2/hw2.tex ] && rm ./hw2/hw2.tex
+	[ -e ./hw2/pdf ] && rm -rf ./hw2/pdf
