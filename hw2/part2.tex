@@ -11,4 +11,55 @@ thus $n$ has $2^3 = 8$ divisors. These divisors are $1,3,5,7,15,21,35,105$.
 know how to count. Alternatively, this can be proved by induction on $k$.
 \end{problem}
 
+\begin{solution}
+\\
+Using proof by induction, we can see why this theorem holds true.
+\\
+\\
+\emph{Base case:} $n=2$
+In this case $n=p_1$, so k=1. $2^k = 2^1 = 2$ We see that there are 2 unique prime
+divisors; 1 and 2.
+\\
+\\
+\emph{Assumption: } Let $n = p_1 \cdot p_2 \cdot ... \cdot p_k$ where $p_1,p_2,...,p_k$ are different primes.
+We assume $n$ has exactly $2^k$ unique divisors.
+\\
+\\
+\emph{Inductive step: } Let $m = p_1 \cdot p_2 \cdot ... \cdot p_k \cdot p_{(k+1)}$
+After substitution, $m = n \cdot p_{(k+1)}$
+\\
+\\
+If $p_1 | n$ and $p_2 | n$, then $(p_1 \cdot p_2) | n$. To find every divisor of $n$, each unique divisor
+must be multiplied with each other. When $m = n \cdot p_{(k+1)}$, $p_{(k+1)}$ must be multiplied by every
+divisor of $n$ to create a new unique set for $m$.
+\\
+\\
+This only holds true for UNIQUE divisors, because non-unique numbers create overlaps in the final divisor set.
+\\
+\\
+\emph{Example:} 
+\[n=15 \]
+\[ 15 = 3 \cdot 5 \]
+
+There are 2 unique, prime divisors, so $2^k = 2^2 = 4$
+
+The 4 divisors are $1, 3, 5, 15$
+
+\[m=30 \]
+\[ 30 = 3 \cdot 5 \cdot 2 \]
+
+$p_{(k+1)}$ is $2$. There are now 3 unique, prime divisors, so $2^k = 2^3 = 8$
+
+The 8 divisors are $1, 2, 3, 6, 5, 10, 15, 30$.
+
+Each of the elements of the original 4 divisor set multiplied by $p_{(k+1)}$ yields the new 8 divisor set.
+
+\[m=45 \]
+\[45 = 3 \cdot 5 \cdot 3 \]
+
+In this case, $p_{(k+1)}$ is $3$.  $2^k = 2^3 = 8$, but since $3$ is not unique, this does not apply.
+This is proven by the factorization of $45$, which is $1, 3, 5, 9, 15, 45$.
+
+$6 \neq 8$
+\end{solution}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%

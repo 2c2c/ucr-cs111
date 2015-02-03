@@ -22,24 +22,35 @@ $17x = 8 \pmod{37}$. Show your work.
 (a)
 
 \begin{align*}
-8^{-1}\pmod{19} &= \\
-8 \cdot a &\equiv 1\pmod{19} \\
-8a &= 19b + 1 \\
+8^{-1} \pmod{19} &\equiv 1 \pmod{19}\\
+8a &= 19b + 1\\
+8a + 19b &= 1\\
 \end{align*}
+\smallskip\noindent
 
-Which is true for $a=12 , b=5$
+So we must find a and b that makes this equation hold:
 
+$a = {8, 16, 24, 32, 40, 48, 56}$
+
+$b = {19, 38, 57}$
+
+So this holds for $a=-7, b=3$
+
+So, 
 \begin{align*}
-8 \cdot 12 &= 19 \cdot b + 1 \\
-&\equiv 1\pmod{19} \\
-8^{-1} &\equiv 12\pmod{19} \\
+8 \cdot -7 &= 19 \cdot b + 1\\
+8 \cdot -7 &\equiv 1 \pmod{19}\\
+8^{-1} &\equiv -7 \pmod{19}\\
+&\equiv 12 \pmod{19}\\
+&\equiv 12
 \end{align*}
-
 
 (b)
 
 \begin{align*}
-8^{-1} \pmod{19} &= 8^{-1} \cdot 8^{18} \pmod{19} && \text{By SLT} \\
+1 \pmod{19} &\equiv 8^{18} \pmod{19}&& \text{By FLT}\\
+8^{-1} \pmod{19} &\equiv 8^{-1} \cdot 8^{18} \pmod{19} && \text{multiply $8^{-1}$ to both sides}\\
+\\
 8^{17} \pmod{19} &\equiv 8^{16} \cdot 8 \pmod{19} \\
 &\equiv 8^{16} \cdot 8 \pmod{19} \\
 &\equiv 64^{8} \cdot 8 \pmod{19} \\
@@ -57,43 +68,79 @@ Which is true for $a=12 , b=5$
 
 (c)
 
+We must find
 \begin{align*}
-20^{-1} \pmod{31} &= \\
-20 \cdot a &\equiv 1 \pmod{31}\\
-20a &= 31b + 1\\
+20a + 31b &= 1\\
 \end{align*}
 
+For some a and b.
 
+$a = {20, 40, 60, 80, 100, 120, 140, 160, 180, 200, 220, 240, 260, 280}$
 
-Which is true for $a = 14, b = 9$.
+$b = {31, 62, 93, 124, 155, 186, 217, 248, 279}$
+
+So this holds for $a=-7, b=3$
+
+So, 
 
 \begin{align*}
 20 \cdot 14 &= 9 \cdot b + 1 \\
-&\equiv 1 \pmod{31} \\
-&\equiv 1 \pmod{31} \\
+20 \cdot 14 &\equiv 1 \pmod{31} \\
 20^{-1} &\equiv 14 \pmod{31} \\
+&\equiv 14 
 \end{align*}
 
 (d)
 
 \begin{align*}
+1 \pmod {31} &\equiv 20^{30} \pmod{31} \\ 
 20^{-1} \pmod{31} &= 20^{-1} \cdot 20^{30} \pmod{31} \\
+\\
 20^{29} \pmod{31} &\equiv 20^{28} \cdot 20 \pmod{31} \\
 &\equiv 400^{14} \cdot 20 \pmod{31} \\
 &\equiv 28^{14} \cdot 20 \pmod{31} \\
-&\equiv 794^{7} \cdot 20 \pmod{31} \\
-&\equiv 19^{7} \cdot 20 \pmod{31} \\
-&\equiv 19^{6} \cdot 380 \pmod{31} \\
-&\equiv 361^{3} \cdot 380 \pmod{31} \\
-&\equiv 20^{3} \cdot 380 \pmod{31} \\
-&\equiv 20^{2} \cdot 380 \cdot 20 \pmod{31} \\
-&\equiv 400 \cdot 380 \cdot 20 \pmod{31} \\
-&\equiv 28 \cdot 380 \cdot 20 \pmod{31} \\
-&\equiv 28 \cdot 8 \cdot 20 \pmod{31} \\
-&\equiv 28 \cdot 160 \pmod{31} \\
-&\equiv 28 \cdot 5 \pmod{31} \\
-&\equiv 140 \pmod{31} \\
-&\equiv 16 \pmod{31} \\
+&\equiv 784^{7} \cdot 20 \pmod{31} \\
+&\equiv 9^{7} \cdot 20 \pmod{31} \\
+&\equiv 9^{6} \cdot 180 \pmod{31} \\
+&\equiv 81^{3} \cdot 180 \pmod{31} \\
+&\equiv 19^{3} \cdot 180 \pmod{31} \\
+&\equiv 19^{2} \cdot 19 \cdot 180 \pmod{31} \\
+&\equiv 361 \cdot 19 \cdot 180 \pmod{31} \\
+&\equiv 20 \cdot 19 \cdot 180 \pmod{31} \\
+&\equiv 380 \cdot 180 \pmod{31} \\
+&\equiv 8 \cdot 25 \pmod{31} \\
+&\equiv 200 \pmod{31} \\
+&\equiv 14 \pmod{31} \\
+&\equiv 14
+\end{align*}
+
+(e)
+
+\begin{align*}
+17x &\equiv 8 \pmod{37} \\
+x &\equiv 8 \cdot 17^{-1} \pmod{37} \\
+\\
+17^{-1} \pmod{37} &\equiv 17^{35} \pmod{37} \\
+&\equiv 17^{34} \cdot 17 \pmod{37} \\
+&\equiv 289^{17} \cdot 17 \pmod{37} \\
+&\equiv 30^{17} \cdot 17 \pmod{37} \\
+&\equiv 30^{16} \cdot 30 \cdot 17 \pmod{37} \\
+&\equiv 900^{8} \cdot 30 \cdot 17 \pmod{37} \\
+&\equiv 12^{8} \cdot 30 \cdot 17 \pmod{37} \\
+&\equiv 144^{4} \cdot 30 \cdot 17 \pmod{37} \\
+&\equiv 33^{4} \cdot 30 \cdot 17 \pmod{37} \\
+&\equiv 1089^{2} \cdot 30 \cdot 17 \pmod{37} \\
+&\equiv 16^{2} \cdot 30 \cdot 17 \pmod{37} \\
+&\equiv 256 \cdot 30 \cdot 17 \pmod{37} \\
+&\equiv 34 \cdot 30 \cdot 17 \pmod{37} \\
+&\equiv 510 \cdot 17 \pmod{37} \\
+&\equiv 29 \cdot 17 \pmod{37} \\
+&\equiv 24 \pmod{37} \\
+\\
+x &\equiv 8 \cdot 24 \pmod{37} \\
+&\equiv 192 \pmod{37} \\
+&\equiv 7 \pmod{37} \\
+&\equiv 7
 \end{align*}
 
 \end{solution}

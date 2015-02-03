@@ -35,5 +35,28 @@ You also need to describe step by step how you arrived at the solution.
 be faster to write a short program.
 \end{problem}
 
+\begin{solution}
 
+$P = (e,n) = (11,65)$
+
+Since $p * q = n$, we know possible candidates are $1$ and $65$, or $5$ and $13$.
+The first combination results in; 
+
+\[ \varphi(n) = 0 \cdot 64 = 0 \]
+
+This can't be correct since you cannot $mod 0$. So we know that;
+
+\[ \varphi(n) = 4 \cdot 12 = 48 \]
+
+We solve for the secret key using;
+
+\[ d = 11^{-1}(mod \varphi(n)) \]
+\[ d = 11^{-1}(mod 48) \]
+\[ d = 35 \]
+
+With $d$ and $n$, we can decrypt the message using;
+
+\[ M = C^{35}(mod 65) \]
+Where $M$ is the original message and $C$ is the encrypted version.
+\end{solution}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
