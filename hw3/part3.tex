@@ -1,0 +1,82 @@
+
+\begin{problem}
+Solve the following recurrence equation:
+%
+\begin{eqnarray*}
+        D_n &=& 4D_{n-1} -8 D_{n-3} + 2n+3\\
+        D_0 &=& 0 \\
+        D_1 &=& 1 \\
+		D_2 &=& 1
+\end{eqnarray*}
+%
+Show your work (all steps: the associated homogeneous equation,
+the characteristic polynomial and its
+roots, the general solution of the homogeneous
+equation, computing a particular solution,
+the general solution of the non-homogeneous equation,
+using the initial conditions to compute the final solution.)
+\end{problem}
+
+\begin{solution}
+
+The recurrence equation is non-homogenous. First, we derive the homogenous part:
+
+\[ D_{n} = 4D_{n-1} - 8D_{n-3} \]
+
+\[ D_{n} = x^{n} \]
+\[ x^{n} = 4x^{n-1} - 8x^{n-3} \]
+\[ x^{3} - 4x^{2} + 8 = 0 \]
+\[ (x-2)(x^{2} - 2x - 4) = 0 \]
+\[ x = 2, 1 \pm \sqrt{5} \]
+
+\[ a_{n} = \alpha_{1}2^{n} + \alpha_{2}(1 + \sqrt{5})^{n} + \alpha_{3}(1 - \sqrt{5})^{n} \]  
+
+Then we focus non-homogenous portion:
+
+\[ g(n) = 2n + 3 \]
+
+Using the the following formula
+
+\[ f"_{n} = (p_{t}n^{t} + p_{t-1}n^{t-1} + ... p_{1}n + p_{o} ) s^{n} \]
+
+We use the degree of $g(n)$ to make:
+
+\[ f"n = p_{1}n + p_{o} \]
+\[ s = 1 \]
+\[ D"_{n} = (p_{1}n + p_{o}) \cdot (1)^{n} \]
+\[ (p_{1}n + p_{o}) = 4(p_{1}(n-1) + p_{o}) - 8(p_{1}(n-3) + p_{o}) + 2n + 3 \]
+\[ (p_{1}n + p_{o}) = 4(p_{1}n - p_{1} + p_{o}) - 8(p_{1}n - 3p_{1} + p_{o}) + 2n + 3 \]
+\[ (p_{1}n + p_{o}) = 4p_{1}n - 4p_{1} + 4p_{o}) - 8p_{1}n - 24p_{1} + 8p_{o}) + 2n + 3 \]
+\[ (p_{1}n + p_{o}) = -4p_{1}n + 20p_{1} - 4p_{o} + 2n + 3 \]
+
+\[ 2n(2p_{1} - 1) - 19p_{1} + 5p_{o} - 3 = 0 \]
+
+When $p_{1} = 1/2$
+
+\[ \frac{-19}{2} + 5p_{o} - 3 \]
+\[ p_{o} = 5/2 \]
+
+\[ D"_{n} = ( \frac{1}{2} + \frac{5}{2}) \cdot (1)^{n} \]
+
+\[ D_{n} = \alpha_{1}2^{n} +  \alpha_{2}(1 + \sqrt{5})^{n} + \alpha_{3}(1 - \sqrt{5})^{n} + (\frac{1}{2})n + \frac{5}{2} \]
+
+Using the base cases provided, we set up the following set of equations:
+
+\[ D_{0} = \alpha_{1} + \alpha_{2} + \alpha_{3} + \frac{5}{2} \]
+\[ D_{1} = \alpha_{1}2 + \alpha_{2}(1 + \sqrt{5}) + \alpha_{3}(1 - \sqrt{5})  + \frac{1}{2} +  \frac{5}{2} \]
+\[ D_{2} = \alpha_{1}2^{2} + \alpha_{2}(1 + \sqrt{5})^{2} + \alpha_{3}(1 - \sqrt{5})^{2}  + 1 +  \frac{5}{2} \]
+
+Solving for the $\alpha$'s gives us:
+
+\[ \alpha_{1} = -\frac{23}{8} \]
+\[ \alpha_{2} = \frac{3}{80}(5 + 9\sqrt{5}) \]
+\[ \alpha_{3} = -\frac{3}{80}(9\sqrt{5} - 5) \]
+
+Plugging this into our equation gives us a final answer:
+
+\[ D_{n} =  -\frac{23}{8}2^{n} +  \frac{3}{80}(5 + 9\sqrt{5})(1 + \sqrt{5})^{n} +  -\frac{3}{80}(9\sqrt{5} - 5) (1 - \sqrt{5})^{n} + (\frac{1}{2})n + \frac{5}{2} \]
+
+\end{solution}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
