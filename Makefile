@@ -17,8 +17,14 @@ hw2: TARGET = hw2
 hw2: pdf
 	$(MAKE)
 
+hw3: TARGET = hw3
+hw3: pdf
+	$(MAKE)
+
 clean:
 	[ -e ./hw1/hw1.tex ] && rm ./hw1/hw1.tex
 	[ -e ./hw1/pdf ] && rm -rf ./hw1/pdf
 	[ -e ./hw2/hw2.tex ] && rm ./hw2/hw2.tex
 	[ -e ./hw2/pdf ] && rm -rf ./hw2/pdf
+	[ -e ./hw3/hw3.tex ] && rm ./hw3/hw3.tex
+	[ -e ./hw3/pdf ] && rm -rf ./hw3/pdf
