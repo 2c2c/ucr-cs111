@@ -37,6 +37,61 @@ empty string satisfies the condition.)
 
 To set up the recurrence relation, let's look at how strings can end.
 
+- If $n$ string ends with "A", you have $(n-1)$ characters left to fill. Theres one root string ending in "A".
+\newline
+
+- If $n$ string ends with "B", you have $(n-2)$ characters left to fill. Theres two root strings ending in "B".
+\newline
+
+- If $n$ string ends with "C", you have $(n-2)$ characters left to fill. Theres two root strings ending in "C".
+\newline
+
+- If $n$ string ends with "E", you have $(n-3)$ characters left to fill. Theres one root string ending in "E".
+\newline
+
+- If $n$ string ends with "F", you have $(n-3)$ characters left to fill. Theres one root string ending in "F".
+\newline
+
+Using the logic above, we can create the relation:
+
+\[ P_{n} = P_{n-3} + P_{n-3} + 2P_{n-2} + 2P_{n-2} + P_{n-1} \]
+
+\[ P_{n} = 2P_{n-3} + 4P_{n-2} + P_{n-1} \]
+
+Writing each solution out by hand, we solve the base cases.
+
+\[ P_{0} = 1 \]
+\[ P_{1} = 1 \]
+\[ P_{2} = 5 \]
+\[ P_{3} = 11 \]
+
+Characteristic equation:
+
+\[ P_{n} = x^{n} \]
+\[ x^{n} = 2x^{n-3} + 4x^{n-2} + x^{n-1} \]
+\[ x^{3} - x^{2} - 4x - 2 = 0 \]
+\[ x = -1, 1 \pm \sqrt{3} \]
+
+General equation:
+
+\[ P_{n} = \alpha_{1}(-1)^{n} + \alpha_{2}(1-\sqrt{3})^{n} + \alpha_{3}(1 + \sqrt{3})^{n} \]
+
+Using base cases, we construct the following system of equations:
+
+\[ P_{0} = \alpha_{1} + \alpha_{2} + \alpha_{3} = 1 \]
+\[ P_{1} = \alpha_{1}(-1) + \alpha_{2}(1-\sqrt{3}) + \alpha_{3}(1+\sqrt{3}) = 1 \]
+\[ P_{5} = \alpha_{1}(-1)^{2} + \alpha_{2}(1-\sqrt{3})^{2} + \alpha_{3}(1+\sqrt{3})^{2} = 5 \]
+
+Solving gives us:
+
+\[ \alpha_{1} = 1 \]
+\[ \alpha_{2} = \frac{-1}{\sqrt{3}} \]
+\[ \alpha_{3} = \frac{1}{\sqrt{3}} \]
+
+Plugging the constants gives us our final equation:
+
+\[ P_{n} = (-1)^{n} - \frac{1}{\sqrt{3}}(1-\sqrt{3})^{n} + \frac{1}{\sqrt{3}}(1 + \sqrt{3})^{n} \]
+
 
 \end{solution}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
