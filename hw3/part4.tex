@@ -11,6 +11,48 @@ Solve the following recurrence equation:
 Show your work.
 \end{problem}
 
+\begin{solution}
+
+Finding the homogenous solution:
+
+\begin{align*}
+A_n &= A_{n-1} + 2A_{n-2} \\
+x^n &= x^{n-1} + 2x^{n-2} \\
+x^2 &= x + 2 && \text{divided by $x^{n-2}$} \\
+x^2 - x - 2 &= 0
+\end{align*}
+
+Which gives us the characteristic equation $x^2 - x - 2$ with solutions $x=2, x=-1$.
+
+This results in the homogenous equation $A_h = C_1 2^n + C_2 (-1)^n$.
+
+Now we must find the particular solution of $g(n) = 3^n$.
+
+Trying the form $a3^n$:
+
+\begin{align*}
+a3^n &= a3^n + 2a3^n +3^n \\
+&= 3a3^n + 3^n \\
+a &= 3a + 1 && \text{divided by $3^n$} \\ 
+a &= -\frac{1}{2}
+\end{align*}
+
+Which gives us the particular solution $A_p = -\frac{1}{2}3^n$
+
+The general solution of nonhomogenous linear equation is of the form $A_g = A_h + A_p$. So in this case:
+$$A_h = C_1 2^n + C_2 (-1)^n - \frac{1}{2}3^n$$
+
+Now we can solve for $C_1, C_2$ using the initial conditions.
+
+$$A_0 = C_1 + C_2 - \frac{1}{2} = 0$$
+$$A_1 = 2C_1 - C_2 - \frac{3}{2} = 4$$
+
+Solving the two equations results in $C_1=2 , C_2=-\frac{3}{2}$.
+
+Hence the solved general solution is $A_g = 2 \cdot 2^n - \frac{3}{2} (-1)^n - \frac{1}{2}3^n$
+
+\end{solution}
+
 \vskip 0.1in
 \paragraph{Submission.}
 To submit the homework, you need to upload the pdf file into ilearn by 11AM on Tuesday, February~17,
