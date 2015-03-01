@@ -1,0 +1,148 @@
+
+\begin{problem}
+Give the asymptotic value (using the $\Theta$-notation)
+for the number of letters that will be printed by the algorithms below.
+Your solution needs to consist of an appropriate recurrence 
+equation and its solution, with a brief justification.
+
+\bigskip
+\noindent
+(a)\ \ 
+\begin{minipage}[t]{3in}
+\begin{tabbing}
+aaa \= aaa \= aaa \= aaa \=  \kill
+\textbf{Algorithm} \textsc{PrintXs} $(n: \mbox{\bf integer})$ \\
+          \> \textbf{if} $n < 3$ \\
+          \>\>  print(``X") \\
+          \>\textbf{else} \\
+          \>\>  \textsc{PrintXs}$(\ceiling{n/3})$\\
+          \>\>  \textsc{PrintXs}$(\ceiling{n/3})$\\
+          \>\>  \textsc{PrintXs}$(\ceiling{n/3})$\\
+          \>\>  \textsc{PrintXs}$(\ceiling{n/3})$\\
+      \>\> \textbf{for} $i \leftarrow 1$ \textbf{to} $2n$ \textbf{do} print(``X")
+\end{tabbing}
+\end{minipage}
+
+\begin{solution}
+\[ T(n) = aT( \frac{n}{b} ) + cn^{d} \]
+\[ a = 4; b = 3; \]
+\[ cn^{d} = 2n; d = 1; c = 2 \]
+\[ L(n) = 4L( \frac{n}{3} ) + 2n \]
+\[ a > b^{d} \]
+\[ \theta(n^{log_{3}4}) \]
+\end{solution}
+
+\bigskip
+\noindent
+(b)\ \
+\begin{minipage}[t]{3in}
+\begin{tabbing}
+aaa \= aaa \= aaa \= aaa \=  \kill
+\textbf{Algorithm} \textsc{PrintYs} $(n: \mbox{\bf integer})$ \\
+          \> \textbf{if} $n < 2$ \\
+          \>\>  print(``Y") \\
+          \>\textbf{else} \\
+          \>\>  \textbf{for} $j \leftarrow 1$ \textbf{to} $7$ 
+					\textbf{do} \textsc{PrintYs}$(\floor{n/2})$\\
+      \>\> \textbf{for} $i \leftarrow 1$ \textbf{to} $n^3$ \textbf{do} print(``Y")
+\end{tabbing}
+\end{minipage}
+
+\begin{solution}
+\[ T(n) = aT( \frac{n}{b} ) + cn^{d} \]
+\[ a = 7; b = 2; \]
+\[ cn^{d} = n^{3}; d = 3; c = 1 \]
+\[ L(n) = 7L( \frac{n}{2} ) + n^{3} \]
+\[ a < b^{d} \]
+\[ \theta(n^{3}) \]
+\end{solution}
+
+
+\bigskip
+\noindent
+(c)\ \ 
+\begin{minipage}[t]{3in}
+\begin{tabbing}
+aaa \= aaa \= aaa \= aaa \=  \kill
+\textbf{Algorithm} \textsc{PrintZs} $(n: \mbox{\bf integer})$ \\
+          \> \textbf{if} $n < 2$ \\
+          \>\>  print(``Z") \\
+          \>\textbf{else} \\
+          \>\>  \textbf{for} $j \leftarrow 1$ \textbf{to} $8$ 
+					\textbf{do} \textsc{PrintZs}$(\floor{n/2})$\\
+      \>\> \textbf{for} $i \leftarrow 1$ \textbf{to} $n^3$ \textbf{do} print(``Z")
+\end{tabbing}
+\end{minipage}
+
+\begin{solution}
+\[ T(n) = aT( \frac{n}{b} ) + cn^{d} \]
+\[ a = 8; b = 2; \]
+\[ cn^{d} = n^{3}; d = 3; c = 1 \]
+\[ L(n) = 8L( \frac{n}{2} ) + n^{3} \]
+\[ a = b^{d} \]
+\[ \theta(n^{3} log n ) \]
+\end{solution}
+
+\bigskip
+\noindent
+(d)\ \ 
+\begin{minipage}[t]{3in}
+\begin{tabbing}
+aaa \= aaa \= aaa \= aaa \=  \kill
+\textbf{Algorithm} \textsc{PrintUs} $(n: \mbox{\bf integer})$ \\
+          \> \textbf{if} $n < 4$ \\
+          \>\>  print(``U") \\
+          \>\textbf{else} \\
+          \>\>  \textsc{PrintUs}$(\ceiling{n/4})$\\
+          \>\>  \textsc{PrintUs}$(\floor{n/4})$\\
+      \>\> \textbf{for} $i \leftarrow 1$ \textbf{to} $11$ \textbf{do} print(``U")
+\end{tabbing}
+\end{minipage}
+
+\begin{solution}
+\[ T(n) = aT( \frac{n}{b} ) + cn^{d} \]
+\[ a = 2; b = 4; \]
+\[ cn^{d} = 11; d = 0; c = 11 \]
+\[ L(n) = 2L( \frac{n}{4} ) + 11 \]
+\[ a > b^{d} \]
+\[ \theta(n^{log_{4}2}) \]
+\end{solution}
+
+\bigskip
+\ 
+
+
+\bigskip
+\noindent
+(e)\ \ 
+\begin{minipage}[t]{3in}
+\begin{tabbing}
+aaa \= aaa \= aaa \= aaa \=  \kill
+\textbf{Algorithm} \textsc{PrintVs} $(n: \mbox{\bf integer})$ \\
+          \> \textbf{if} $n < 3$ \\
+          \>\>  print(``V") \\
+          \>\textbf{else} \\
+          \>\>  \textbf{for} $j \leftarrow 1$ \textbf{to} $10$ 
+					\textbf{do} \textsc{PrintVs}$(\floor{n/3})$\\
+      \>\> \textbf{for} $i \leftarrow 1$ \textbf{to} $2n^3$ \textbf{do} print(``V")
+\end{tabbing}
+\end{minipage}
+
+\begin{solution}
+\[ T(n) = aT( \frac{n}{b} ) + cn^{d} \]
+\[ a = 10; b = 3; \]
+\[ cn^{d} = 2n^{3}; d = 3; c = 2 \]
+\[ L(n) = 10L( \frac{n}{3} ) + 2n^{3} \]
+\[ a < b^{d} \]
+\[ \theta(n^{3}) \]
+\end{solution}
+
+
+\bigskip
+\
+
+
+\end{problem}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
