@@ -1,0 +1,54 @@
+
+\begin{problem}
+Determine (using the inclusion-exclusion principle)
+the number of integer solutions of the equation:
+%
+\begin{eqnarray*}
+x + y + z &=& 20,
+\end{eqnarray*}
+%
+under the constraints 
+%
+\begin{eqnarray*}
+        1 \;\le\; x \;\le\; 5 \\
+        3 \;\le\; y \;\le\; 9 \\
+        1\;\le\; z  \;\le\; 8
+\end{eqnarray*}
+%
+Show your work.
+\end{problem}
+
+\begin{solution}
+
+Re-writing the constraints, we get:
+
+\[ 0 \leq x' \leq 4 \]
+\[ 0 \leq y' \leq 6 \]
+\[ 0 \leq z' \leq 7 \]
+
+Substituting these constraints into the original sum, we get:
+
+\[ (x' + 1) + (y' + 3) + (z' + 1) = 20 \]
+\[ x' + y' + z' = 15 \]
+
+The inclusion-exclusion principle tells us that:
+
+\[ S(x' \leq 4 \wedge y' \leq 6 \wedge z' \leq 7) \]
+
+Or
+
+\[ S - S(x' \geq 5 \vee y' \geq 7 \vee z' \geq 8) \]
+\[ = S - (S(x' \geq 5 ) + S(y' \geq 7) + S(z' \geq 8) - S(x' \geq 5 \wedge y' \geq 7) - S(x' \geq 5 \wedge z' \geq 8) - S(y' \geq 7 \wedge z' \geq 8) + S(x \geq 5 \wedge y' \geq 7 \wedge z' \geq 8)) \]
+
+$S$ is equal to  $\binom{m+k-1}{k-1}$.
+
+\[ S = \binom {15 + 3 -1}{3 - 1} = \binom{17}{2} = 136 \]
+
+For each induvidual inequality, we use $\binom{m - A + k - 1}{k - 1}$
+
+\[ = \binom{17}{2} - (\binom{12}{2} + \binom{10}{2} + \binom{9}{2} - \binom{5}{2} - \binom{4}{2} - \binom{2}{2} + \binom{0}{2}) \]
+\[ = 136 - (66 + 45 + 36 - 10 - 6 - 1 + 0) \]
+\[ = 136 - 130 \]
+\[ = 6 \]
+\end{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
