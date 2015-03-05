@@ -19,28 +19,31 @@ Determine the number of ways to assemble the fruit basked.
 let x be apples, y bananas, z mangos, t strawberries.
 
 $$x+y+z+t=26$$
-$$0\le x \le 6$$
-$$0\le y \le 4$$
-$$0\le z \le 5$$
+$$6\le x$$
+$$4\le y$$
+$$5\le z$$
 $$3\le t \le 5$$
 
-We want strawberries to to have a 0 on the lhs of its inequality. we sub $t'=t-3$ which results in $0 \le t' \le 2$ and readjusts the eqn to
+We want all fruits to have a 0 on the lhs of its inequality. e.g. for t,  we sub $t'=t-3$ which results in $0 \le t' \le 2$.
 
-$$x+y+z+t' = 23$$
-
-we know $S(x \le 6 \land y \le 4 \land z \le 5 \land t' \le 2) = S - S(x \ge 7 \lor y \ge 5 \lor z \ge 6 \lor t' \ge 3)$. We'll refer to LHS as Q from now on.
+\begin{align*}
+x' = x-6, &&  0\le x' \\
+y' = y-4, &&  0\le y' \\
+z' = z-5, &&  0\le z' \\
+x'+y'+z'+t' = 8 
+\end{align*}
+we know $S(x' \ge 0 \land y' \ge 0 \land z' \ge 0 \land t' \le 2) = S - S(t' \ge 3)$ (x,y,z cannot be negative, so they can be excluded). We'll refer to LHS as Q from now on.
 
 Where S is the entire set without constraints.
 
 Solving for S using ${m + k - 1} \choose {k - 1}$:
 
-$$S = {26 \choose 3} = 2600$$
-\begin{multline*}
-Q = S - ( {19 \choose 3} + {21 \choose 3} + {20 \choose 3} + {23 \choose 3} - {14 \choose 3} - {13 \choose 3}\\
- - {16 \choose 3} - {15 \choose 3} - {18 \choose 3} - {17 \choose 3} + {8 \choose 3} + {11 \choose 3} + {10 \choose 3} + {12 \choose 3} - {5 \choose 3} )\\
- = 2600 - 2100
- = 500
-\end{multline*}
+\begin{align*}
+S &= {11 \choose 3} = 165 \\
+Q &= S - {8 \choose 3}\\
+  &= 165 - 56 \\
+  &= 109
+\end{align*}
 
 \end{solution}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
