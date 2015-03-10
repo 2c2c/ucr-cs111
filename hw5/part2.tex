@@ -24,3 +24,24 @@ only need to show how it can be derived from part (a).)
 
 \end{problem}
 
+\begin{solution}
+(a) Each node must have at most $k+1$ colors where $k$ is the number of neighbors among the 
+verticies preceding $v_i$. 
+
+If you have two verticies that are connected to each other, then,
+
+\[  v_i = 1 \]
+\[  k = 1 \]
+\[  k + 1 = 2 \]
+
+There are only two verticies that share an edge. They must be a distinct color, so the two verticies have a unique
+color. Every time you add a new vertex, you can assume that each preceding vertex is connected to the one you add. Basically,
+$v_1$ shares an edge with every vertex that is added until $v_1$. Each vertex needs a unique color, so for $v_2$ you need
+$3$ colors, for $v_3$ you need $4$ colors, for $v_4$ you need $5$ colors, and so on. The trend is that you need
+1 more color than the verticies that are present, so you can have at most $k+1$ colors. You can have less, but this
+condition is if each preceding vertex are connected together.
+
+(b)
+Assume graph $G$ contains a vertex that has $D$ edges. Using the standards from part (a), we assume this vertex 
+is $v_i$, and it has $D$ neighbors. Part (a) tells us $v_(i-1)$ has at most $D$ colors. Since $D = k$, the graph can
+be colored with at most $D+1$ colors.
