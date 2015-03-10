@@ -1,0 +1,102 @@
+\documentclass{article}
+
+\usepackage{fullpage,latexsym,picinpar,amsmath,amsfonts,graphicx}
+
+\graphicspath{{./}{./pdf/}}
+\input{macros.tex}
+
+\begin{document}
+
+\student{ Chetas Manjunath}{ 860978339 }
+% v -- YOUR NAME and SID in the braces
+\student{ Craig Collier}{ 861100234 }   
+\centerline{\large \bf CS/MATH111 ASSIGNMENT 5}
+\centerline{due Tuesday, March 10 (11AM)}
+
+\vskip 0.15in
+\noindent{\bf Individual assignment:} Problems 1 and 2.
+
+\noindent{\bf Group assignment:} Problems 1, 2 and 3.
+
+\vskip 0.15in
+®
+%%%%%%%%%%%%%%%%
+
+\begin{problem}
+(a) Let $G = (V,E)$ be a graph with $|V| = n$, and let $k$ be an integer, where $1\le k\le n$.
+Prove the following theorem:
+``Suppose the the vertices in $V$ can be ordered $v_1,v_2,...,v_n$ in such a way
+that each vertex $v_i$ has at most $k$ neighbors among the preceding
+vertices $v_1,...,v_{i-1}$. Then $G$ can be colored with at most $k+1$ colors.''
+
+For example, the figure below shows a graph and an ordering of its
+vertices where each vertex has at most $3$ neighbors that precede it in this
+ordering. So this theorem claims that this graph can be colored with $4$ colors.
+
+	\begin{center}
+	\includegraphics[width = 6in]{ordering_hw5.pdf}
+	\end{center}
+
+\noindent
+(b)
+Prove that the theorem in part (a) above implies the following
+statement: ``If all vertices of a graph $G$ have degree at most $D$
+then $G$ can be colored with at most $D+1$ colors''.
+(You will cover a different proof of this theorem in the discussion. Here you
+only need to show how it can be derived from part (a).)
+
+\end{problem}
+
+
+\begin{problem}
+	You are given two bipartite graphs $G$ and $H$ below. For each
+	graph determine whether it has a perfect matching.
+	Justify your answer, either by 
+	listing the edges that are in the matching or using
+	Hall's Theorem to show that the graph does not have a
+	perfect matching.
+
+	\begin{center}
+	\includegraphics[width = 1.75in]{bipartite_graphG_hw5.pdf}
+	\ \ \ \ \
+	\includegraphics[width = 1.75in]{bipartite_graphH_hw5.pdf}
+	\end{center}
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% new
+
+
+
+\begin{problem}
+Determine which of the following two graphs are planar.
+Justify your answer. (You need to either show a planar embedding or
+use Kuratowski's theorem.)
+
+	\begin{center}
+		\includegraphics[width = 2.3in]{graphGa_hw5.pdf}
+		\hfill
+		\includegraphics[width = 2.8in]{graphHa_hw5.pdf}
+	\end{center}
+
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+\vskip 0.1in
+\paragraph{Submission.}
+To submit the homework, you need to upload the pdf file into ilearn by 8AM on Tuesday, June 3,
+and turn-in a paper copy in class.
+Pictures should be 
+imported into {\LaTeX} in pdf (see the source file to see
+how to do that). You can draw them in any drawing
+software and export in pdf, or draw by hand and scan.
+
+\end{document}
+

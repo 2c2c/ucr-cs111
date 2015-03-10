@@ -4,7 +4,7 @@ latexmk -pdf -jobname=pdf/$(TARGET) $(TARGET).tex;\
 cd ..
 
 
-all: hw1 hw2 hw3 hw4
+all: hw1 hw2 hw3 hw4 hw5
 
 pdf: 
 	[ -e ./$(TARGET)/pdf ] || mkdir ./$(TARGET)/pdf
@@ -25,6 +25,10 @@ hw4: TARGET = hw4
 hw4: pdf
 	$(MAKE)
 
+hw5: TARGET = hw5
+hw5: pdf
+	$(MAKE)
+
 clean:
 	[ -e ./hw1/hw1.tex ] && rm ./hw1/hw1.tex
 	[ -e ./hw1/pdf ] && rm -rf ./hw1/pdf
@@ -34,3 +38,5 @@ clean:
 	[ -e ./hw3/pdf ] && rm -rf ./hw3/pdf
 	[ -e ./hw4/hw4.tex ] && rm ./hw4/hw4.tex
 	[ -e ./hw4/pdf ] && rm -rf ./hw4/pdf
+	[ -e ./hw5/hw5.tex ] && rm ./hw5/hw5.tex
+	[ -e ./hw5/pdf ] && rm -rf ./hw5/pdf
